@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+    <table>
+      <thead>
+        <tr>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Email</td>
+        </tr>
+    </thead>  
+        <tbody>
+        {% if users %}
+            {% for u in users %}
+                <tr>
+                    <td>{{ u.first_name }}</td>
+                    <td>{{ u.last_name }}</td>
+                    <td>{{ u.email }}</td>
+                </tr>
+            {% endfor %}
+        {% endif %}
+
+      <tbody>
+    </table>
+    
+    </body>
+</html>
+
+<style>
+    table , thead, tr, td{
+        border:#000 solid 2px;
+    }
+</style>
